@@ -36,6 +36,7 @@ namespace Tip__Tax_and_Total
 
         private void ResetToMainStyle()
         {
+            // Reset Border to Default Color
             BillAmountTextBox.BorderBrush = new SolidColorBrush(Color.FromArgb(100, 171, 173, 179));
         }
 
