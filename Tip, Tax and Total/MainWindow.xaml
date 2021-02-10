@@ -1,0 +1,63 @@
+﻿<Window x:Class="Tip__Tax_and_Total.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tip__Tax_and_Total"
+        mc:Ignorable="d"
+        Title="Tip, Tax and Total" ResizeMode="NoResize" Height="450" Width="800">
+    <Grid Background="#3E3E3E">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center">
+            <Label Background="#161616" Foreground="White" Content="Please enter the bill amount" HorizontalContentAlignment="Center" FontFamily="Cambria" Width="275" ></Label>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left">
+            <Label FontFamily="Cambria"  Background="#161616" Foreground="White" Content="Bill Amount" HorizontalContentAlignment="Center" Width="135"></Label>
+        </Viewbox>
+        <Viewbox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left">
+            <Label FontFamily="Cambria"  Background="#161616" Foreground="White" Content="Tip (15%)" HorizontalContentAlignment="Center" Width="135"></Label>
+        </Viewbox>
+        <Viewbox Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left">
+            <Label FontFamily="Cambria"  Background="#161616" Foreground="White" Content="Sales Tax (7%)" HorizontalContentAlignment="Center" Width="135"></Label>
+        </Viewbox>
+        <Viewbox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <Label FontFamily="Cambria" Foreground="LightGreen" Content="$" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                <TextBox FontFamily="Cambria" Name="BillAmountTextBox" MinWidth="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"></TextBox>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <Label FontFamily="Cambria" Foreground="LightGreen" Content="$" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                <Label FontFamily="Cambria" Foreground="LightGreen" Name="TipAmountLabel" Content="0" MinWidth="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"></Label>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <Label FontFamily="Cambria" Foreground="LightGreen" Content="$" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                <Label FontFamily="Cambria" Foreground="LightGreen" Name="SalesTaxAmountLabel" Content="0" MinWidth="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"></Label>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1" HorizontalAlignment="Left">
+            <StackPanel Orientation="Horizontal">
+                <Label FontFamily="Cambria" Foreground="LightGreen" Content="$" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+                <Label FontFamily="Cambria" Foreground="LightGreen" FontWeight="Bold" Content="0" Name="TotalAmountLabel" MinWidth="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Left"></Label>
+            </StackPanel>
+        </Viewbox>
+        <Viewbox Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="1" HorizontalAlignment="Left">
+            <Label FontFamily="Cambria"  Background="#161616" Foreground="White" Content="Total" HorizontalContentAlignment="Center" Width="135"></Label>
+        </Viewbox>
+        <Button FontFamily="Cambria" Cursor="Hand" Name="CalculateTotalAmount" Background="#187DD9" Foreground="White" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Margin="5" FontSize="38" Click="CalculateTotalAmount_Click">Calculate Total</Button>
+    </Grid>
+</Window>
